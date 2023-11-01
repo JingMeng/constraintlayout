@@ -44,6 +44,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
 //    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation project(path: ':constraintlayout')
+//    有一些是自定义的，没有办法替换成下面的这个
+//    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation project(path: ':core')
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
