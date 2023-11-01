@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Bundle extra = getIntent().getExtras();
         if (extra == null) {
+            //入口
             Loader.normalMenuStartUp(this, activitiesDemo);
             return;
         }

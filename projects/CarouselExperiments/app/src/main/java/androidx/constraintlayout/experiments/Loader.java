@@ -57,6 +57,13 @@ public class Loader {
         return null;
     }
 
+    /**
+     * 从这个开始的
+     * 这个就是里面的botton
+     *
+     * @param mainActivity
+     * @param activitiesDemo
+     */
     static void normalMenuStartUp(MainActivity mainActivity, Class[] activitiesDemo) {
         String[] layouts = getLayouts(s -> s.matches(LAYOUTS_MATCHES));
         ScrollView sv = new ScrollView(mainActivity);
