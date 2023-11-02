@@ -38,6 +38,12 @@ public class Loader {
     private static final String LAYOUTS_MATCHES = "demo_\\d+_.*";
     private static String SHOW_FIRST = "";
 
+    /**
+     * 这个遍历有点奇怪---------就是一个查找方案，看一看树的查找
+     *
+     * @param group
+     * @return
+     */
     static MotionLayout findMotionLayout(ViewGroup group) {
         ArrayList<ViewGroup> groups = new ArrayList<>();
         groups.add(group);
@@ -76,6 +82,9 @@ public class Loader {
             linearLayout.addView(button);
             button.setOnClickListener(view -> launch(mainActivity, (String) view.getTag()));
         }
+        /**
+         * 专门加了两个activity的演示
+         */
         for (Class aClass : activitiesDemo) {
             Button button = new Button(mainActivity);
             button.setText("Demo from " + aClass.getSimpleName());
@@ -90,6 +99,12 @@ public class Loader {
         mainActivity.setContentView(sv);
     }
 
+    /**
+     * 过滤当前文件的layout文件只获取符合命名规则的文件
+     *
+     * @param filter
+     * @return
+     */
     private static String[] getLayouts(Test filter) {
         ArrayList<String> list = new ArrayList<>();
         Field[] f = R.layout.class.getDeclaredFields();

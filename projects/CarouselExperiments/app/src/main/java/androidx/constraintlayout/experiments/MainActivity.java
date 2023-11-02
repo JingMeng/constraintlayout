@@ -86,7 +86,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Bundle extra = getIntent().getExtras();
         if (extra == null) {
-            //入口
+            /**
+             * 入口-设置数据 setContentView 就是从这里面设置的
+             * 上来加载的数据
+             */
             Loader.normalMenuStartUp(this, activitiesDemo);
             return;
         }
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         String prelayout = extra.getString(Loader.KEY);
         layout_name = prelayout;
         Context ctx = getApplicationContext();
+        //找图片的那种方式
         int id = ctx.getResources().getIdentifier(prelayout, "layout", ctx.getPackageName());
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         ActionBar bar = getSupportActionBar();
