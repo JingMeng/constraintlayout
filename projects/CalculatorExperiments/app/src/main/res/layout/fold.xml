@@ -19,6 +19,7 @@
         app:layout_constraintTop_toBottomOf="@id/card"
         app:round="4dp" />
 
+    <!--    这一块是顶部的那一块-->
     <include layout="@layout/advance_buttons" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView

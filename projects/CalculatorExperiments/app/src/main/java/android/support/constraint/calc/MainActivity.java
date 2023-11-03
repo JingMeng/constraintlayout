@@ -98,6 +98,21 @@ public class MainActivity extends AppCompatActivity {
         mInverseMap.put("save", "save");
     }
 
+    /**
+     * 里面的案例都是值得学习的
+     * https://developer.android.com/training/constraint-layout/motionlayout?hl=zh-cn
+     * <p>
+     * 如需详细了解 MotionScene 支持的各种元素
+     * <p>
+     * https://developer.android.com/training/constraint-layout/motionlayout/examples?hl=zh-cn
+     * <p>
+     * <p>
+     * 下面的注释是自动生成的-----这个注释以前是面试题的，因为会存在NPE异常
+     *
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle contains the data it most
+     *                           recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
